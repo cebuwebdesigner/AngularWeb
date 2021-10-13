@@ -1,0 +1,21 @@
+<!--<ul>
+    <li *ngFor="let readpost of readPosts">
+        {{readpost.author}}
+        </li>
+    </ul>
+-->
+<div  class="col-6" style="float:left">
+    <div *ngFor="let readpost of readPosts; index as i" >
+        <a id="a{{i+1}}" href="#tab{{i+1}}" >{{ readpost.title }} </a>
+    </div>
+</div>
+
+
+<div  class="col-6" style="float:left">
+    <div *ngFor="let readpost of readPosts; index as i"  >
+        <div id="tab{{i+1}}"></div>
+        <h4>{{ readpost.title }}</h4>
+        <span><a href="#">{{ readpost.type }}</a> / <a href="#">{{ readpost.author }}</a> / <a href="#">{{ readpost.publishdate }}</a></span>
+        <p>{{ readpost.detail }}</p>
+    </div>
+    </div>
